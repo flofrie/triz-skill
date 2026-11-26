@@ -1,0 +1,12 @@
+{
+  "name": "triz",
+  "version": "0.1.0",
+  "description": "TRIZ for software and business: contradiction matrix with a verified lookup script, 40 principles and 39 parameters translated for software and business, separation, resources, Root Conflict Analysis (RCA+), system operator, perception mapping, trimming and ARIZ.",
+  "author": {
+    "name": "Florian Friedrich"
+  },
+  "homepage": "https://github.com/flofrie/triz-skill",
+  "repository": "https://github.com/flofrie/triz-skill",
+  "license": "MIT",
+  "keywords": ["triz", "contradiction", "problem-solving", "innovation", "software", "business"]
+}

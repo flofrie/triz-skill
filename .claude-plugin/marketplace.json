@@ -1,0 +1,14 @@
+{
+  "name": "triz-skill",
+  "owner": {
+    "name": "Florian Friedrich"
+  },
+  "description": "TRIZ (Theory of Inventive Problem Solving) for software, product, business and organisational problems.",
+  "plugins": [
+    {
+      "name": "triz",
+      "source": "./plugins/triz",
+      "category": "productivity"
+    }
+  ]
+}
