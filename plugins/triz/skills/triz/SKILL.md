@@ -61,11 +61,31 @@ Working style:
 Before any solution, state:
 - **System and its main function** (what it is for, from the user's or customer's point of view).
 - **Undesired effect**: what goes wrong, where, when. Be concrete.
-- **Constraints**: what must not change; budget, time, contracts, regulation, politics.
+- **Constraints** as the user states them: budget, time, contracts, regulation, politics.
 - **Mini-problem**: "achieve the result with minimal change to the system."
 
-If key facts are missing and guessing would change the answer, ask one or two short questions.
-Otherwise state assumptions and continue.
+**Challenge the frame.** Problems arrive wrapped in assumptions that block the best ideas
+(TRIZ calls this psychological inertia). Before solving, do three quick checks:
+1. **Real or habit?** Sort each constraint into *real* (law, regulation, a signed contract, a
+   client's explicit requirement, physics) or *habit* (how it is done today, how it was set up,
+   what people believe is required). Ask what exactly the rule or contract says. Habits may be
+   changed; treat them as part of the problem, not as its boundary.
+2. **Plain words.** Restate the problem once without jargon and without naming the current
+   solution: "a weekly CAB" becomes "someone checks that a change is safe before it goes live".
+   The jargon word often carries the current form of the solution with it.
+3. **One extreme.** Push one dimension to the limit (zero time, zero budget, a thousand times the
+   volume, one user instead of all) and see which part of the problem disappears or gets worse.
+
+More tools (size-time-cost operator, smart little people, function instead of device):
+`references/psychological-inertia.md`. Use them when the problem has resisted solutions or the
+user's framing feels fixed.
+
+Mention a finding from these checks in the answer only when it changes something, for example
+"the regulator requires a documented approval, not a weekly meeting". Do not list the checks.
+
+If key facts are missing and guessing would change the answer, ask one or two short questions;
+asking which constraints are hard is often the most useful question. Otherwise state your own
+assumptions and continue.
 
 Then formulate the **Ideal Final Result (IFR)**: "X ITSELF, without complicating the system,
 without cost or harm, eliminates the undesired effect while keeping the useful function."
@@ -143,3 +163,4 @@ Neun-Felder-Denken, Grundkonfliktanalyse, Trimmen. Russian terms are understood 
 - Adding a new tool, team or process when a resource already present could do the job.
 - Using engineering parameters literally for business problems: translate them.
 - Running a full RCA+ or perception map when the user had a clear trade-off and wanted ideas.
+- Accepting a stated constraint as fixed when it is a habit, or questioning one that is a real legal or contractual limit.

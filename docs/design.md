@@ -42,6 +42,8 @@ The skill combines two MIT-licensed community projects. `docs/source-review.md` 
 
 **D9. Distribution through the repo.** The repo is a Claude plugin marketplace with one plugin (`triz`) that contains one skill (`triz`). Installing from the marketplace keeps the full skill with reference files and script, and updates follow the repo. `scripts/package.sh` builds a ZIP for a single-skill upload as a fallback.
 
+**D10. Challenge the frame in every mode.** (27 November 2026) The first version treated the user's constraints as given in Quick and Standard mode; the tools that challenge the frame (checking whether a constraint is real, intensification, smart little people) only ran inside ARIZ. Most software and business problems never reach Deep mode, and many of them are stuck because of an unstated assumption. SKILL.md step 3 now runs three short checks every time: sort constraints into real or habit, restate the problem in plain words without the current solution's name, and push one dimension to an extreme. A new reference, `psychological-inertia.md`, holds the fuller toolset (STC operator, smart little people, function instead of device, inverse problem, signs of inertia). The checks stay invisible in the answer unless a finding changes the recommendation.
+
 ## Not done yet
 
 See `docs/backlog.md`.

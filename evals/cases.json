@@ -8,50 +8,142 @@
     "No framework theater: TRIZ terms appear only when the user asked for TRIZ or a workshop, and never replace mechanisms",
     "Matrix principles, when cited, match scripts/matrix.py output",
     "The route fits the problem: no full RCA+ or perception map for a clear trade-off",
-    "German prompts get German answers with correct German terms"
+    "German prompts get German answers with correct German terms",
+    "When a stated constraint is a habit rather than a real limit, the answer says so and uses it; real legal or contractual limits are respected"
   ],
   "cases": [
-    {"id": "ci-speed", "should_trigger": true, "route": "contradiction",
-     "prompt": "Our CI suite takes 40 minutes and protects compliance coverage. Developers need useful feedback within 5 minutes. Cutting tests is not allowed."},
-    {"id": "signup-fields", "should_trigger": true, "route": "contradiction",
-     "prompt": "Sales wants company size, role and use case at signup. Growth says each extra field costs conversion. Find something better than a compromise."},
-    {"id": "auth-friction", "should_trigger": true, "route": "contradiction",
-     "prompt": "Use TRIZ: we need stronger authentication in a banking app, but users hate extra login steps."},
-    {"id": "free-tier", "should_trigger": true, "route": "contradiction",
-     "prompt": "Our free plan is so good that almost nobody upgrades. If we cut it, signups drop. How do we get out of this?"},
-    {"id": "model-cost", "should_trigger": true, "route": "contradiction",
-     "prompt": "The large model is 8 points more accurate but 12x more expensive per request. We can't afford it for all traffic."},
-    {"id": "de-autonomie", "should_trigger": true, "route": "contradiction",
-     "prompt": "Unsere Teams sollen autonom entscheiden, aber der Kunde verlangt eine einheitliche Architektur über alle Produkte. Jede zentrale Vorgabe bremst die Teams. Hilf mir mit TRIZ."},
-    {"id": "template-fit", "should_trigger": true, "route": "contradiction",
-     "prompt": "Our requirements template has to be standardised so results are comparable across business units, but every unit insists its processes are special and the template doesn't fit."},
-    {"id": "slipping-releases", "should_trigger": true, "route": "rca+",
-     "prompt": "Releases keep slipping by two or three weeks. We tried more planning, a release manager and a stricter definition of done. Nothing sticks. What's really going on?"},
-    {"id": "de-grundkonflikt", "should_trigger": true, "route": "rca+",
-     "prompt": "Mach eine Grundkonfliktanalyse: Die Kundenzufriedenheit im Support sinkt seit einem Jahr, obwohl wir mehr Leute eingestellt haben."},
-    {"id": "blame", "should_trigger": true, "route": "perception-mapping",
-     "prompt": "Engineering and marketing blame each other for missed launches. I'm running a workshop with both next week. How should I structure it so we get to the real conflicts?"},
-    {"id": "approval-process", "should_trigger": true, "route": "trimming",
-     "prompt": "Our change process has a weekly CAB, a security sign-off, an architecture review and a release board. Changes take three weeks. What can we remove without increasing incidents?"},
-    {"id": "microservices-sprawl", "should_trigger": true, "route": "trimming",
-     "prompt": "We have 60 microservices for a product with 8 developers. Operations cost is killing us. How do we simplify without a big rewrite?"},
-    {"id": "bi-future", "should_trigger": true, "route": "system-operator",
-     "prompt": "Where is internal BI reporting heading over the next five years? Should we still invest in our dashboard platform?"},
-    {"id": "de-neun-felder", "should_trigger": true, "route": "system-operator",
-     "prompt": "Mach ein Neun-Felder-Denken für einen Online-Marktplatz für Gebrauchtwaren."},
-    {"id": "ariz-deep", "should_trigger": true, "route": "ariz",
-     "prompt": "Walk me through ARIZ for this: our search must return results in under 100 ms, but relevance needs a re-ranking step that takes 300 ms."},
-    {"id": "workshop-mode", "should_trigger": true, "route": "rca+",
-     "prompt": "Let's do a root conflict analysis step by step. Top problem: our consulting projects overrun their budget by 20% on average."},
-    {"id": "bug", "should_trigger": false,
-     "prompt": "This handler panics when the optional 'email' field is missing. Fix it and add a test."},
-    {"id": "comparison", "should_trigger": false,
-     "prompt": "Postgres or MySQL for a small internal CRUD app?"},
-    {"id": "taste", "should_trigger": false,
-     "prompt": "Write three taglines for a neighborhood coffee shop."},
-    {"id": "data-first", "should_trigger": false,
-     "prompt": "What was our conversion rate last month compared to the month before?"},
-    {"id": "de-meeting", "should_trigger": false,
-     "prompt": "Formuliere eine Einladung für unser Team-Offsite nächste Woche."}
+    {
+      "id": "ci-speed",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Our CI suite takes 40 minutes and protects compliance coverage. Developers need useful feedback within 5 minutes. Cutting tests is not allowed."
+    },
+    {
+      "id": "signup-fields",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Sales wants company size, role and use case at signup. Growth says each extra field costs conversion. Find something better than a compromise."
+    },
+    {
+      "id": "auth-friction",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Use TRIZ: we need stronger authentication in a banking app, but users hate extra login steps."
+    },
+    {
+      "id": "free-tier",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Our free plan is so good that almost nobody upgrades. If we cut it, signups drop. How do we get out of this?"
+    },
+    {
+      "id": "model-cost",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "The large model is 8 points more accurate but 12x more expensive per request. We can't afford it for all traffic."
+    },
+    {
+      "id": "hidden-constraint",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Every production change in our bank needs approval in the weekly change advisory board because of regulation. That makes urgent fixes take up to a week. How do we get faster without breaking compliance?"
+    },
+    {
+      "id": "de-annahme",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Unser Kunde verlangt, dass jede Anforderung vor dem Sprint vollständig spezifiziert ist. Dadurch verlieren wir Wochen, und die Specs ändern sich trotzdem. Was tun?"
+    },
+    {
+      "id": "de-autonomie",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Unsere Teams sollen autonom entscheiden, aber der Kunde verlangt eine einheitliche Architektur über alle Produkte. Jede zentrale Vorgabe bremst die Teams. Hilf mir mit TRIZ."
+    },
+    {
+      "id": "template-fit",
+      "should_trigger": true,
+      "route": "contradiction",
+      "prompt": "Our requirements template has to be standardised so results are comparable across business units, but every unit insists its processes are special and the template doesn't fit."
+    },
+    {
+      "id": "slipping-releases",
+      "should_trigger": true,
+      "route": "rca+",
+      "prompt": "Releases keep slipping by two or three weeks. We tried more planning, a release manager and a stricter definition of done. Nothing sticks. What's really going on?"
+    },
+    {
+      "id": "de-grundkonflikt",
+      "should_trigger": true,
+      "route": "rca+",
+      "prompt": "Mach eine Grundkonfliktanalyse: Die Kundenzufriedenheit im Support sinkt seit einem Jahr, obwohl wir mehr Leute eingestellt haben."
+    },
+    {
+      "id": "blame",
+      "should_trigger": true,
+      "route": "perception-mapping",
+      "prompt": "Engineering and marketing blame each other for missed launches. I'm running a workshop with both next week. How should I structure it so we get to the real conflicts?"
+    },
+    {
+      "id": "approval-process",
+      "should_trigger": true,
+      "route": "trimming",
+      "prompt": "Our change process has a weekly CAB, a security sign-off, an architecture review and a release board. Changes take three weeks. What can we remove without increasing incidents?"
+    },
+    {
+      "id": "microservices-sprawl",
+      "should_trigger": true,
+      "route": "trimming",
+      "prompt": "We have 60 microservices for a product with 8 developers. Operations cost is killing us. How do we simplify without a big rewrite?"
+    },
+    {
+      "id": "bi-future",
+      "should_trigger": true,
+      "route": "system-operator",
+      "prompt": "Where is internal BI reporting heading over the next five years? Should we still invest in our dashboard platform?"
+    },
+    {
+      "id": "de-neun-felder",
+      "should_trigger": true,
+      "route": "system-operator",
+      "prompt": "Mach ein Neun-Felder-Denken für einen Online-Marktplatz für Gebrauchtwaren."
+    },
+    {
+      "id": "ariz-deep",
+      "should_trigger": true,
+      "route": "ariz",
+      "prompt": "Walk me through ARIZ for this: our search must return results in under 100 ms, but relevance needs a re-ranking step that takes 300 ms."
+    },
+    {
+      "id": "workshop-mode",
+      "should_trigger": true,
+      "route": "rca+",
+      "prompt": "Let's do a root conflict analysis step by step. Top problem: our consulting projects overrun their budget by 20% on average."
+    },
+    {
+      "id": "bug",
+      "should_trigger": false,
+      "prompt": "This handler panics when the optional 'email' field is missing. Fix it and add a test."
+    },
+    {
+      "id": "comparison",
+      "should_trigger": false,
+      "prompt": "Postgres or MySQL for a small internal CRUD app?"
+    },
+    {
+      "id": "taste",
+      "should_trigger": false,
+      "prompt": "Write three taglines for a neighborhood coffee shop."
+    },
+    {
+      "id": "data-first",
+      "should_trigger": false,
+      "prompt": "What was our conversion rate last month compared to the month before?"
+    },
+    {
+      "id": "de-meeting",
+      "should_trigger": false,
+      "prompt": "Formuliere eine Einladung für unser Team-Offsite nächste Woche."
+    }
   ]
 }

@@ -36,6 +36,10 @@ which opens separation in space or time.
 
 ## 4. Mini-problem
 
+Before applying the mini-problem, check the constraints it rests on (real or habit, see
+SKILL.md step 3 and `psychological-inertia.md`). A mini-problem built on a habit constraint
+locks in the habit.
+
 "Keep the system as it is (or simplify it) and eliminate the undesired effect." This forbids the
 easy escape of adding a new subsystem and forces the use of resources. Relax it only if no
 solution appears.

@@ -46,6 +46,7 @@ plugins/triz/
     NOTICE.md                       sources and attribution
     references/
       problem-modeling.md           function model, operating zone, IFR, contradiction forms
+      psychological-inertia.md      hidden assumptions: real vs. habit constraints, plain words, STC, smart little people
       parameters.md                 39 parameters with software and business equivalents
       principles.md                 40 principles with software and business examples
       separation.md                 resolving physical contradictions
