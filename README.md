@@ -26,6 +26,15 @@ claude plugin install triz@triz-skill
 
 **Single-skill upload:** run `scripts/package.sh` and upload `dist/triz.zip` under Customize → Skills.
 
+### Other agents
+
+The skill follows the open [Agent Skills](https://agentskills.io) format, so other agents that read `SKILL.md` folders can use it. Copy or symlink the folder `plugins/triz/skills/triz` into the agent's skills directory:
+
+- **OpenAI Codex:** `~/.agents/skills/triz` (all projects) or `.agents/skills/triz` in a repository.
+- **OpenClaw:** `openclaw skills install ./plugins/triz/skills/triz` from a clone of this repo, or copy the folder to `~/.openclaw/skills/triz`.
+
+The matrix lookup needs Python 3 on the machine where the agent runs. Without it, the agent can read `scripts/matrix.json` directly, as SKILL.md describes.
+
 ## Layout
 
 ```
@@ -54,6 +63,7 @@ docs/                               design decisions, source review, backlog, no
 evals/cases.json                    test prompts, including cases where the skill must stay out
 examples/                           worked example
 tests/                              matrix data and script tests
+AGENTS.md, CLAUDE.md                instructions for coding agents working on this repo
 ```
 
 ## Development
